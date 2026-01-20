@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c9c57cc-4af9-4908-a151-6df24250ebaf" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Arrays/ceilingBinarysearch.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/recursion/src/mid/Apple.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2zB4pNJtG8bV3NPh9FKtZCVah6s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Apple.executor": "Run",
+    "Application.Dice.executor": "Run",
+    "Application.DoubleExponentialExample.executor": "Run",
+    "Application.Inputs.executor": "Run",
+    "Application.LinearSearch.executor": "Debug",
+    "Application.Main (1).executor": "Run",
+    "Application.Main (2).executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PrettyPrinting.executor": "Run",
+    "Application.ProductNtoone.executor": "Run",
+    "Application.Questions.executor": "Run",
+    "Application.Searchinstrings.executor": "Run",
+    "Application.StringBUIlder.executor": "Run",
+    "Application.Subset.executor": "Run",
+    "Application.SumofN.executor": "Run",
+    "Application.allDir.executor": "Run",
+    "Application.arraylist.executor": "Run",
+    "Application.asciplussub.executor": "Run",
+    "Application.basic (1).executor": "Run",
+    "Application.basic.executor": "Debug",
+    "Application.binarysearch.executor": "Debug",
+    "Application.binarysorted2d.executor": "Run",
+    "Application.bsearchceiling.executor": "Run",
+    "Application.bsearchinfinity.executor": "Debug",
+    "Application.bubblesort.executor": "Run",
+    "Application.ceilingBinarysearch.executor": "Run",
+    "Application.changevalue.executor": "Run",
+    "Application.countZeros.executor": "Run",
+    "Application.cyclicsort.executor": "Run",
+    "Application.diag.executor": "Run",
+    "Application.dupinArr.executor": "Run",
+    "Application.eight.executor": "Run",
+    "Application.evennumberofdigits.executor": "Run",
+    "Application.factors.executor": "Run",
+    "Application.fibanicci.executor": "Run",
+    "Application.fiboncci.executor": "Run",
+    "Application.first.executor": "Run",
+    "Application.firstArray.executor": "Run",
+    "Application.five.executor": "Run",
+    "Application.four.executor": "Run",
+    "Application.funOverload.executor": "Run",
+    "Application.function.executor": "Run",
+    "Application.gcd.executor": "Run",
+    "Application.inplaceMerg.executor": "Run",
+    "Application.insertionsort.executor": "Run",
+    "Application.isPowerof2.executor": "Run",
+    "Application.ithbit.executor": "Run",
+    "Application.leet.executor": "Debug",
+    "Application.leetcode17.executor": "Run",
+    "Application.linearSearch.executor": "Debug",
+    "Application.magicNumber.executor": "Run",
+    "Application.max2darray.executor": "Run",
+    "Application.maximumitem.executor": "Run",
+    "Application.mergeSort.executor": "Run",
+    "Application.methods.executor": "Run",
+    "Application.minnum.executor": "Run",
+    "Application.multiarraylist.executor": "Run",
+    "Application.nKnight.executor": "Run",
+    "Application.nQueen.executor": "Run",
+    "Application.nine.executor": "Run",
+    "Application.ntoone.executor": "Run",
+    "Application.numberOfsetbits.executor": "Run",
+    "Application.obstacle.executor": "Run",
+    "Application.oddEven.executor": "Run",
+    "Application.optimizefibo.executor": "Run",
+    "Application.orderagnosticbsearch.executor": "Run",
+    "Application.palindrome.executor": "Run",
+    "Application.pascalsTriangle.executor": "Run",
+    "Application.pat1.executor": "Run",
+    "Application.permu.executor": "Run",
+    "Application.primeNu.executor": "Run",
+    "Application.printPath.executor": "Run",
+    "Application.productofDigits.executor": "Run",
+    "Application.quickSort.executor": "Run",
+    "Application.raphsonSqrt.executor": "Run",
+    "Application.recurringdigits.executor": "Run",
+    "Application.reverseaNumber.executor": "Run",
+    "Application.reversing.executor": "Run",
+    "Application.rotatedBSearch.executor": "Run",
+    "Application.rotcountinrotatedsortedarray.executor": "Run",
+    "Application.rowcolumnarray.executor": "Run",
+    "Application.search2darray.executor": "Run",
+    "Application.searchinrange.executor": "Run",
+    "Application.second.executor": "Run",
+    "Application.seive.executor": "Run",
+    "Application.selectionSort.executor": "Run",
+    "Application.selectionsort.executor": "Run",
+    "Application.seven.executor": "Run",
+    "Application.shadowing.executor": "Run",
+    "Application.six.executor": "Run",
+    "Application.skipChar.executor": "Run",
+    "Application.sortedarr.executor": "Run",
+    "Application.sqrt.executor": "Run",
+    "Application.subset.executor": "Run",
+    "Application.sudokuSolver.executor": "Run",
+    "Application.sumOfDigits.executor": "Run",
+    "Application.swap.executor": "Run",
+    "Application.switchcase.executor": "Run",
+    "Application.testalso.Main.executor": "Run",
+    "Application.three.executor": "Run",
+    "Application.twoDarrays.executor": "Run",
+    "Application.varArgs.executor": "Run",
+    "Application.welcome.executor": "Run",
+    "Application.wrapper (1).executor": "Run",
+    "Application.wrapper.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/gurup/OneDrive/Desktop/Java-Dsa",
+    "onboarding.tips.debug.path": "C:/Users/gurup/OneDrive/Desktop/Java-Dsa/oops/src/Main.java"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gurup\OneDrive\Desktop\Java-Dsa\Arrays\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DoubleExponentialExample">
+    <configuration name="DoubleExponentialExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DoubleExponentialExample" />
+      <module name="oops" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="oops" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="oops" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="imp.Main" />
+      <module name="oops" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testalso.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testalso.Main" />
+      <module name="oops" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testalso.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DoubleExponentialExample" />
+        <item itemvalue="Application.testalso.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c9c57cc-4af9-4908-a151-6df24250ebaf" name="Changes" comment="" />
+      <created>1751191313744</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751191313744</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Arrays/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Arrays/bsearchceiling.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Strings/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Strings/src/PrettyPrinting.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/patternQuestions/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/recursion/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/recursion/src/fiboncci.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/recursion/src/binarysearch.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Math/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/recursion/src/midsort/quickSort.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/recursion/src/basic.java</url>
+          <line>1</line>
+          <properties class="basic" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Java_Dsa$fiboncci.ic" NAME="fiboncci Coverage Results" MODIFIED="1754417727206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>
