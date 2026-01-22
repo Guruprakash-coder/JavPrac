@@ -1,14 +1,12 @@
 package oop6.generics;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
-public class customArrayList {
-    Integer a=10;
+public class customGenericArrayList {
     private int[] data;
     private static int DEFAULT_SIZE = 10;
     private int size = 0;
-    public customArrayList() {
+    public customGenericArrayList() {
         this.data = new int[DEFAULT_SIZE];
     }
     public void add(int num) {
@@ -63,5 +61,4 @@ public class customArrayList {
         System.out.println(list);
 
     }
-
 }
