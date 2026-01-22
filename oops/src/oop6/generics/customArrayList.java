@@ -27,6 +27,11 @@ public class customArrayList {
         }
         data=temp;
     }
+    public int remove(){
+
+        int removed = data[--size];
+        return removed;
+    }
     public static void main(String[] args) {
         ArrayList list= new ArrayList();
         list.add(45);
