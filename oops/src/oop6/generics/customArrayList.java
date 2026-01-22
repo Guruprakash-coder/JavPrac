@@ -1,6 +1,7 @@
 package oop6.generics;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class customArrayList {
     private int[] data;
@@ -32,10 +33,33 @@ public class customArrayList {
         int removed = data[--size];
         return removed;
     }
-    public static void main(String[] args) {
-        ArrayList list= new ArrayList();
-        list.add(45);
+    public int get(int index){
+        return data[index];
+    }
+    public int size(){
+        return size;
 
+    }
+    public void set(int index,int value){
+        data[index]=value;
+    }
+
+    @Override
+    public String toString() {
+        return "CustomArrayList{" +
+                "data=" + Arrays.toString(data) +
+                ", size=" + size +
+                '}';
+    }
+
+    public static void main(String[] args) {
+//        ArrayList list= new ArrayList();
+        //list.add(45);
+        customArrayList list=new customArrayList();
+        list.add(5);
+        list.add(10);
+        list.add(7);
+        System.out.println(list);
 
     }
 
