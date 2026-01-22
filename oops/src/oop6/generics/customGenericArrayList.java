@@ -2,14 +2,14 @@ package oop6.generics;
 
 import java.util.Arrays;
 
-public class customGenericArrayList {
-    private int[] data;
+public class customGenericArrayList<T> {
+    private Object[] data;
     private static int DEFAULT_SIZE = 10;
     private int size = 0;
     public customGenericArrayList() {
-        this.data = new int[DEFAULT_SIZE];
+        this.data = new Object[DEFAULT_SIZE];
     }
-    public void add(int num) {
+    public void add(T num) {
         if (isFull()) {
             resize();
         }
@@ -20,26 +20,26 @@ public class customGenericArrayList {
 
     }
     public void resize(){
-        int[] temp= new int[data.length *2];
+        Object[] temp= new Object[data.length *2];
 
         for (int i = 0; i < data.length; i++) {
             temp[i] = data[i];
         }
         data=temp;
     }
-    public int remove(){
+    public T remove(){
 
-        int removed = data[--size];
+        T removed = (T)(data[--size]);
         return removed;
     }
-    public int get(int index){
-        return data[index];
+    public T get(int index){
+        return (T) data[index];
     }
     public int size(){
         return size;
 
     }
-    public void set(int index,int value){
+    public void set(int index,T value){
         data[index]=value;
     }
 
@@ -52,9 +52,8 @@ public class customGenericArrayList {
     }
 
     public static void main(String[] args) {
-//        ArrayList list= new ArrayList();
-        //list.add(45);
-        customArrayList list=new customArrayList();
+
+        customGenericArrayList<Integer> list=new customGenericArrayList<>();
         list.add(5);
         list.add(10);
         list.add(7);
