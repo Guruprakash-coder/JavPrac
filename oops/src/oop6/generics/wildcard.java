@@ -1,6 +1,7 @@
 package oop6.generics;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class wildcard<T extends Number> {
     private Object[] data;
@@ -9,6 +10,10 @@ public class wildcard<T extends Number> {
     public wildcard() {
         this.data = new Object[DEFAULT_SIZE];
     }
+    //Wild card
+    public void getList(List<? extends Number> list){
+
+    }// wild card
     public void add(T num) {
         if (isFull()) {
             resize();
