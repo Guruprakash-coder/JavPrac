@@ -20,6 +20,9 @@ public class LambdaFunctions {
 
         LambdaFunctions myCalculators =new LambdaFunctions();
         System.out.println(myCalculators.operate(5,3,sum));
+        System.out.println(myCalculators.operate(5,3,prod));
+        System.out.println(myCalculators.operate(5,3,div));
+
     }
 
     private int operate(int a,int b,Operation op){
