@@ -17,11 +17,15 @@ public class LambdaFunctions {
         Operation sum=(a, b)-> a+b;
         Operation prod=(a, b)-> a*b;
         Operation div=(a, b)-> a/b;
+
+        LambdaFunctions myCalculators =new LambdaFunctions();
+        System.out.println(myCalculators.operate(5,3,sum));
     }
 
-    int sum(int a,int b){
-        return a+b;
+    private int operate(int a,int b,Operation op){
+        return op.operation(a,b);
     }
+
 }
 
  interface Operation {
