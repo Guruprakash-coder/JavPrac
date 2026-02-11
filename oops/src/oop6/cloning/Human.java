@@ -16,7 +16,16 @@ public class Human implements Cloneable {
 //        this.arr=other.arr;
 //    }
 
+//    public Object clone() throws CloneNotSupportedException{
+//        return super.clone();
+//    }
     public Object clone() throws CloneNotSupportedException{
-        return super.clone();
+        Human twin =(Human) super.clone();//shalow copy i.e: new primitive created newly but object points to already existing one
+        //Deep copy i.e completely new
+        twin.arr=new int[twin.arr.length];
+        for(int i=0;i<twin.arr.length;i++){
+            twin.arr[i]=this.arr[i];
+        }
+        return twin;
     }
 }
