@@ -57,8 +57,24 @@ public class CustomLL {
         size--;
         return val;
     }
-    public void deleteLast(){
+    public int deleteLast(){
+        if(size<=1){
+            return deleteFirst();
+        }
+        Node secondLast=get(size-2);
+        int value=tail.value;
+        tail=secondLast;
+        tail.next=null;
+        size--;
+        return value;
 
+    }
+    public Node get(int index){
+        Node node=head;
+        for(int i=0;i<index;i++){
+            node=node.next;
+        }
+        return node;
     }
     public void display(){
         Node temp=head;
