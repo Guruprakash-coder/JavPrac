@@ -19,6 +19,23 @@ public class CustomLL {
         }
         size+=1;
     }
+    public void insert(int val,int index){
+        if(index==0){
+            insertFirst(val);
+        }else if(index==size){
+            insertlast(val);
+        }else{
+            Node temp=head;
+            for(int i=1;i<index;i++){
+                temp=temp.next;
+
+            }
+            Node node=new Node(val,temp.next);
+            temp.next=node;
+            size++;
+        }
+
+    }
     public void insertlast(int value){
         if(tail==null){
             insertFirst(value);
