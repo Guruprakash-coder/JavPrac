@@ -19,7 +19,9 @@ public class CustomLL {
         }
         size+=1;
     }
+
     public void insert(int val,int index){
+
         if(index==0){
             insertFirst(val);
         }else if(index==size){
@@ -45,6 +47,18 @@ public class CustomLL {
         tail=node;
 
         size++;
+    }
+    public int deleteFirst(){
+        int val= head.value;
+        head=head.next;
+        if(head==null){
+            tail=null;
+        }
+        size--;
+        return val;
+    }
+    public void deleteLast(){
+
     }
     public void display(){
         Node temp=head;
