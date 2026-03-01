@@ -37,7 +37,8 @@ public class DoublyCustomLL {
                 temp=temp.next;
 
             }
-            Node node=new Node(val,temp.next);
+            Node node=new Node(val,temp.next,temp);
+
             temp.next=node;
             size++;
         }

@@ -12,5 +12,7 @@ public class Main {
         list.insertlast(99);
         list.insert(100,3);
         list.display();
+        String s;
+        s.to
     }
 }
