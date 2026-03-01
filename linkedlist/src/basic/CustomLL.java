@@ -82,6 +82,16 @@ public class CustomLL {
         size--;
         return val;
     }
+    public Node find(int val){
+        Node node=head;
+        while(node!=null){
+            if(node.value == val){
+                return node;
+            }
+            node=node.next;
+        }
+        return null;
+    }
     public Node get(int index){
         Node node=head;
         for(int i=0;i<index;i++){
