@@ -1,7 +1,10 @@
 package basic;
 
+import java.util.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
+
         CustomLL list=new CustomLL();
         list.insertFirst(17);
         list.insertFirst(8);
