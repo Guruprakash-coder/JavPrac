@@ -12,6 +12,7 @@ public class DoublyCustomLL {
     public void insertFirst(int val){
         Node node =new Node(val);
         node.next=head;
+        node.prev=null;
         head.prev=node;
         head=node;
         if(tail == null){
