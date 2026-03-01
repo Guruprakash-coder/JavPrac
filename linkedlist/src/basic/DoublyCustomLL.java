@@ -46,10 +46,13 @@ public class DoublyCustomLL {
     public void insertlast(int value){
         if(tail==null){
             insertFirst(value);
+            return;
         }
         Node node=new Node(value);
         tail.next=node;
+        node.prev=tail;
         tail=node;
+        tail.next=null;
 
         size++;
     }
@@ -111,6 +114,14 @@ public class DoublyCustomLL {
             temp=temp.next;
         }
         System.out.print("End");
+    }
+    public void displayRev(){
+        Node temp=tail;
+        while(temp!=null){
+            System.out.print(temp.value+"->");
+            temp=temp.prev;
+        }
+        System.out.print("Start");
     }
     private class Node{
         private int value;
