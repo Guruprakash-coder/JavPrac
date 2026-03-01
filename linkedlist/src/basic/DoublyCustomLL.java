@@ -10,10 +10,14 @@ public class DoublyCustomLL {
         this.size=0;
     }
     public void insertFirst(int val){
+
         Node node =new Node(val);
         node.next=head;
         node.prev=null;
-        head.prev=node;
+        if(head!=null){
+            head.prev=node;
+        }
+
         head=node;
         if(tail == null){
             tail=head;
