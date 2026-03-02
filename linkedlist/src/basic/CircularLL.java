@@ -106,12 +106,13 @@ public class CircularLL {
         return node;
     }
     public void display(){
-        Node temp=head;
-        while(temp!=null){
-            System.out.print(temp.value+"->");
-            temp=temp.next;
+        Node node = head;
+        if (head != null) {
+            do {
+                System.out.print(node.value + " -> ");
+                node = node.next;
+            } while (node != head);
         }
-        System.out.print("End");
     }
     private class Node{
         private int value;
