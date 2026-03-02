@@ -9,4 +9,6 @@ public class Main {
         node.add(56);
         System.out.println(node);
         }
-    }
+
+
+}
