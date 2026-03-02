@@ -1,5 +1,5 @@
 package basic;
-
+//Not finished Just some reference
 public class CircularLL {
     private Node head;
     private Node tail;
@@ -56,6 +56,8 @@ public class CircularLL {
     }
     public int deleteFirst(){
         int val= head.value;
+
+        tail.next=head.next;
         head=head.next;
         if(head==null){
             tail=null;
@@ -70,7 +72,7 @@ public class CircularLL {
         Node secondLast=get(size-2);
         int value=tail.value;
         tail=secondLast;
-        tail.next=null;
+        tail.next=head;
         size--;
         return value;
 
