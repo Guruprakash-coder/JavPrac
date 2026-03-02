@@ -38,6 +38,9 @@ public class CustomLL {
         }
 
     }
+    public void insertrec(int val,int index){
+
+    }
     public void insertlast(int value){
         if(tail==null){
             insertFirst(value);
