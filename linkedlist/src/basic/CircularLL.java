@@ -10,12 +10,19 @@ public class CircularLL {
         this.size=0;
     }
     public void insertFirst(int val){
+
         Node node =new Node(val);
+        if(head==null){
+            head=node;
+            tail=node;
+            node.next=node;
+            size++;
+            return;
+        }
+
         node.next=head;
         head=node;
-        if(tail == null){
-            tail=head;
-        }
+        tail.next=head;
         size+=1;
     }
 
