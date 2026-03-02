@@ -13,6 +13,6 @@ public class Main {
         list.insert(100,3);
         list.display();
         String s;
-        s.to
+
     }
 }
