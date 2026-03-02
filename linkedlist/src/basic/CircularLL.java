@@ -113,6 +113,7 @@ public class CircularLL {
                 node = node.next;
             } while (node != head);
         }
+        System.out.print("Head");
     }
     private class Node{
         private int value;
