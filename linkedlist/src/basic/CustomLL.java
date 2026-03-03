@@ -29,8 +29,18 @@ public class CustomLL {
                     Node prev=get(col-1);
                     prev.next=second;
                     tail=first;
+                    first.next=null;
+                    second.next=tail;
+                }else{
+                    Node prev=get(col-1);
+                    prev.next=second;
+                    first.next=second.next;
+                    second.next=first;
                 }
             }
+            bubbleSort(row,col+1);
+        }else{
+            bubbleSort(row-1,0);
         }
     }
     public void insertFirst(int val){
