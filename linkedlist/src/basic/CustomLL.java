@@ -7,7 +7,6 @@ public class CustomLL {
     private int size;
 
     public CustomLL(){
-
         this.size=0;
     }
     public void bubbleSort(){
