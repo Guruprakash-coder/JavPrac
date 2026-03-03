@@ -3,9 +3,7 @@ package basic;
 import java.util.LinkedList;
 
 public class Main {
-    public void bubbleSort(){
 
-    }
     public static void main(String[] args) {
 
         CustomLL list=new CustomLL();
