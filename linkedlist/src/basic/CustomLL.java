@@ -9,6 +9,18 @@ public class CustomLL {
     public CustomLL(){
         this.size=0;
     }
+    //rec reverse
+    private void reverse(Node node){
+        if(node==tail){
+            head=tail;
+            return;
+        }
+        reverse(node.next);
+        tail.next=node;
+        tail=node;
+        tail.next=null;
+
+    }
     public void bubbleSort(){
         bubbleSort(size-1,0);
     }
