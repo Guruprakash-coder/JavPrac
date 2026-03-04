@@ -47,9 +47,21 @@ public class Custom {
         ListNode Next=pres.next;
         for(int i=0;pres!=null && i<right-left+1;i++){
             pres.next=prev;
-            prev=pres;
 
+            prev=pres;
+            pres=Next;
+            if(Next!=null){
+                Next=Next.next;
+            }
         }
+        if(last!=null){
+            last.next=prev;
+        }else{
+            head=prev;
+        }
+
+        newEnd.next=pres;
+        return head;
 
 
     }
