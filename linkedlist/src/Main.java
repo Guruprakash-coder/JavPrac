@@ -8,7 +8,8 @@ public class Main {
         node.add(15);
         node.add(56);
         System.out.println(node);
-        }
+        int a=Integer.MAX_VALUE;
+    }
 
 
 }
