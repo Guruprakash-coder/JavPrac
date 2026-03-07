@@ -64,7 +64,7 @@ public class Custom {
         }
         ListNode prev=null;
         ListNode pres=head;
-        while(true){
+        while(pres!=null){
             ListNode temp = pres;
             int count = 0;
 
@@ -100,10 +100,13 @@ public class Custom {
             }
 
             newEnd.next=pres;
-            if(pres==null){
-                break;
-            }
-            prev=newEnd;
+
+        for(int i=0;pres!=null && i<k;i++){
+            prev=pres;
+            pres=pres.next;
+
+        }
+
         }
         return head;
     }
