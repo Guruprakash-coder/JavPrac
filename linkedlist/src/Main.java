@@ -9,6 +9,8 @@ public class Main {
         node.add(56);
         System.out.println(node);
         int a=Integer.MAX_VALUE;
+        StringBuilder sb=new StringBuilder();
+
     }
 
 

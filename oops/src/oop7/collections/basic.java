@@ -8,7 +8,8 @@ public class basic {
         List<Integer> list2=new LinkedList<>();
 
         list2.add(43);
-
+        StringBuilder sb=new StringBuilder();
+        
         list2.add(89);
         System.out.println(list2);
         List<Integer> vect=new Vector<>();
