@@ -20,6 +20,21 @@ public class cusstack {
         data[ptr]=item;
         return true;
     }
+    public int pop() throws StackException {
+        if(isEmpty()){
+            throw new StackException("Cannot pop from an empty stack");
+        }
+        int rem=data[ptr];
+
+        ptr--;
+        return rem;
+    }
+    public int peek() throws StackException {
+        if(isEmpty()){
+            throw new StackException("Cannot peek from an empty stack");
+        }
+        return data[ptr];
+    }
     public boolean isFull(){
         return ptr==data.length-1;
     }
