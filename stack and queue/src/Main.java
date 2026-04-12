@@ -18,17 +18,19 @@ public class Main {
 //        System.out.println(s.pop());
 //        System.out.println(s.pop());
 //        System.out.println(s.pop());
-        Queue<Integer> q=new LinkedList<>();
-        q.add(3);
-        q.add(6);
-        q.add(7);
-        q.add(19);
-        q.add(22);
-        System.out.println(q.peek());
-        System.out.println(q.remove());
-        System.out.println(q.remove());
-        System.out.println(q.remove());
-        System.out.println(q.remove());
-        System.out.println(q.remove());
+//        Queue<Integer> q=new LinkedList<>();
+//        q.add(3);
+//        q.add(6);
+//        q.add(7);
+//        q.add(19);
+//        q.add(22);
+//        System.out.println(q.peek());
+//        System.out.println(q.remove());
+//        System.out.println(q.remove());
+//        System.out.println(q.remove());
+//        System.out.println(q.remove());
+//        System.out.println(q.remove());
+        Deque<Integer> deque=new ArrayDeque<>();
+
     }
 }
