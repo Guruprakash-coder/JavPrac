@@ -37,13 +37,27 @@ public class Main {
         }
 
     private static boolean haveWon(char[][] board, char player) {
-
+        for(int row = 0; row < board.length; row++) {
+            if(board[row][0]==player && board[row][1]==player && board[row][2]==player){
+                return true;
+            }
+            if(board[0][row]==player && board[1][row]==player && board[2][row]==player){
+                return true;
+            }
+        }
+        if(board[0][0]==player && board[1][1]==player && board[2][2]==player){
+            return true;
+        }
+        if(board[0][2]==player && board[1][1]==player && board[2][1]==player){
+            return true;
+        }
+        return false;
     }
 
     private static void printBoard(char[][] board) {
         for(int row = 0; row < board.length; row++) {
             for(int col = 0; col <board [row].length; col++){
-                System.out.print(board[row][col]+" ");
+                System.out.print(board[row][col]+" | ");
             }
             System.out.println();
         }
