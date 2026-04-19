@@ -6,12 +6,15 @@
       <list>
         <option value="$PROJECT_DIR$/PTquestions/pom.xml" />
         <option value="$PROJECT_DIR$/PlacTrain/pom.xml" />
+        <option value="$PROJECT_DIR$/tiktaktoe/pom.xml" />
+        <option value="$PROJECT_DIR$/tiktak/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/PTquestions/pom.xml" />
         <option value="$PROJECT_DIR$/PlacTrain/pom.xml" />
+        <option value="$PROJECT_DIR$/tiktaktoe/pom.xml" />
       </set>
     </option>
   </component>

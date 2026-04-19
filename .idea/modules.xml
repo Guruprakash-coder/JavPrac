@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/patternQuestions/patternQuestions.iml" filepath="$PROJECT_DIR$/patternQuestions/patternQuestions.iml" />
       <module fileurl="file://$PROJECT_DIR$/recursion/recursion.iml" filepath="$PROJECT_DIR$/recursion/recursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/stack and queue/stack and queue.iml" filepath="$PROJECT_DIR$/stack and queue/stack and queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tiktak.iml" filepath="$PROJECT_DIR$/tiktak.iml" />
     </modules>
   </component>
 </project>
