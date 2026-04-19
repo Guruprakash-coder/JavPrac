@@ -2,6 +2,7 @@ package intqns;
 import java.util.Arrays;
 import java.util.Stack;
 public class GameOfStacks {
+
     public int max(int x,int[] a,int[] b){
         return max(x,a,b,0,0)-1;
     }
