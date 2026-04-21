@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
         StringBuilder sb=new StringBuilder();
         sb.append("ejgjghjg");
-
+        String s="dfs";
+        
         StringBuilder ans= new StringBuilder(sb.substring(0, sb.length()));
 
         System.out.println(ans);
