@@ -5,8 +5,9 @@ import com.sun.source.tree.Tree;
 public class Main {
     public static void main(String[] args) {
         StringBuilder sb=new StringBuilder();
-        sb.append("ejgjghjg");
+        sb.append("dfs");
         String s="dfs";
+        System.out.println(sb.equals(s));
 
         StringBuilder ans= new StringBuilder(sb.substring(0, sb.length()));
         System.out.println(ans);

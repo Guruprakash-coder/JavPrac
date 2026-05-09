@@ -3,6 +3,7 @@ package implement;
 import java.util.Scanner;
 
 public class BinaryTree {
+    StringBuilder sb=new StringBuilder("123");
 
     public BinaryTree(){
 
