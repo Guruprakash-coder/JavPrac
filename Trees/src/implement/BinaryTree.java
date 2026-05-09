@@ -1,5 +1,6 @@
 package implement;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class BinaryTree {
@@ -42,5 +43,23 @@ public class BinaryTree {
             node.right=new Node(value);
             populate(scanner,node.right);
         }
+    }
+    public void display(){
+        display(root,"");
+    }
+    public void display(Node node,String indent){
+        if(node==null){
+            return;
+        }
+        System.out.println(indent+node.value);
+        display(node.left,indent+"\t");
+        display(node.right,indent+"\t");
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        BinaryTree tree=new BinaryTree();
+        tree.populate(sc);
+        tree.display();
     }
 }
