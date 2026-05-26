@@ -41,6 +41,8 @@ public class BST {
         if(value>node.value){
             node.right=insert(value, node.right);
         }
+        node.height=Math.max(height(node.left),height(node.right))+1;
+        return node;
     }
     public void display(){
         display(root,"Root Node:");
