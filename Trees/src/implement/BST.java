@@ -27,5 +27,17 @@ public class BST {
     public boolean isEmpty(){
         return root==null;
     }
+    public void display(){
+        display(root,"Root Node:");
+    }
+    private void display(Node node,String details){
+        if(node==null){
+            return;
+        }
+        System.out.println(details+node.getValue());
 
+        display(node.left,"Left child of"+node.getValue()+" : ");
+        display(node.right,"right child of"+node.getValue()+" : ");
+
+    }
 }
