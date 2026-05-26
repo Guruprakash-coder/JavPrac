@@ -44,6 +44,15 @@ public class BST {
         node.height=Math.max(height(node.left),height(node.right))+1;
         return node;
     }
+    public boolean balanced(){
+        return balanced(root);
+    }
+    private boolean balanced(Node node){
+       if(node==null){
+           return true;
+       }
+       return Math.abs(height(node.left)-height(node.right))<=1;
+    }
     public void display(){
         display(root,"Root Node:");
     }
