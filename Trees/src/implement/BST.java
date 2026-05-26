@@ -37,8 +37,9 @@ public class BST {
         }
         if(value<node.value){
              node.left=insert(value,node.left);
-        }else{
-
+        }
+        if(value>node.value){
+            node.right=insert(value, node.right);
         }
     }
     public void display(){
