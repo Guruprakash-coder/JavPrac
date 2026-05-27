@@ -44,6 +44,11 @@ public class BST {
         node.height=Math.max(height(node.left),height(node.right))+1;
         return node;
     }
+    public void populate(int[] nums){
+        for(int i=0;i<nums.length;i++){
+            insert(nums[i]);
+        }
+    }
     public boolean balanced(){
         return balanced(root);
     }
