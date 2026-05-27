@@ -71,6 +71,18 @@ public class BST {
        }
        return Math.abs(height(node.left)-height(node.right))<=1 && balanced(node.left) && balanced(node.right);
     }
+    public void preOrder(){
+        preOrder(root);
+    }
+    private void preOrder(Node node){
+        if(node==null){
+            return;
+        }
+
+        System.out.println(node.value+" ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
     public void display(){
         display(root,"Root Node:");
     }
