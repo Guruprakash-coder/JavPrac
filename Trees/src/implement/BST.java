@@ -83,6 +83,31 @@ public class BST {
         preOrder(node.left);
         preOrder(node.right);
     }
+    public void inOrder(){
+        inOrder(root);
+    }
+    private void inOrder(Node node){
+        if(node==null){
+            return;
+        }
+        preOrder(node.left);
+        System.out.println(node.value+" ");
+
+        preOrder(node.right);
+    }
+    public void postOrder(){
+        postOrder(root);
+    }
+    private void postOrder(Node node){
+        if(node==null){
+            return;
+        }
+
+
+        preOrder(node.left);
+        preOrder(node.right);
+        System.out.println(node.value+" ");
+    }
     public void display(){
         display(root,"Root Node:");
     }
