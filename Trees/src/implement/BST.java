@@ -51,7 +51,7 @@ public class BST {
        if(node==null){
            return true;
        }
-       return Math.abs(height(node.left)-height(node.right))<=1;
+       return Math.abs(height(node.left)-height(node.right))<=1 && balanced(node.left) && balanced(node.right);
     }
     public void display(){
         display(root,"Root Node:");
