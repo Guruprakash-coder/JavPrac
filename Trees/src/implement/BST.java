@@ -28,7 +28,7 @@ public class BST {
         return root==null;
     }
     public void insert(int value){
-        insert(value,root);
+        root=insert(value,root);
     }
     private Node insert(int value,Node node){
         if(node==null){
