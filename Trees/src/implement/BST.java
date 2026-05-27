@@ -49,6 +49,19 @@ public class BST {
             insert(nums[i]);
         }
     }
+    public void populatedSorted(int[] nums){
+        populatedSorted(nums,0,nums.length-1);
+    }
+    private void populatedSorted(int[] nums,int start,int end){
+        if(start>end){
+            return;
+        }
+        int mid=(start+end)/2;
+        insert(nums[mid]);
+        populatedSorted(nums,start,mid-1);
+        populatedSorted(nums,mid+1,end);
+
+    }
     public boolean balanced(){
         return balanced(root);
     }
