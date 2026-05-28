@@ -63,7 +63,7 @@ public class AVLTree {
             //right heavy
             if(height(node.right.right)-height(node.right.left)>0){
                 //right right
-                return leftrotate(node)
+                return leftrotate(node);
             }
             if(height(node.right.right)-height(node.right.left)<0){
                 //right left
@@ -85,8 +85,15 @@ public class AVLTree {
         return c;
 
     }
-    private Node leftrotate(Node p){
-        Node c=
+    private Node leftrotate(Node c){
+        Node p=c.right;
+        Node t=p.left;
+        p.left=c;
+        c.right=t;
+        p.height=Math.max(height(p.left),height(p.right))+1;
+        c.height=Math.max(height(c.left),height(c.right))+1;
+        return p;
+
     }
     public void populate(int[] nums){
         for(int i=0;i<nums.length;i++){
