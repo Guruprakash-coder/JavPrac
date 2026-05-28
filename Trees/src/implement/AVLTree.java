@@ -19,6 +19,7 @@ public class AVLTree {
     public AVLTree(){
 
     }
+
     public int height(Node node){
         if(node==null){
             return -1;

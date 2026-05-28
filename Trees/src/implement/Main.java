@@ -2,10 +2,11 @@ package implement;
 
 public class Main {
     public static void main(String[] args) {
-        BST tree=new BST();
+        AVLTree tree=new AVLTree();
 
-        int[] arr= new int[]{10, 20, 30, 40, 50, 60, 78, 92, 112, 440};
-        tree.populatedSorted(arr);
+        for(int i=0;i<1000;i++){
+            tree.insert(i);
+        }
         tree.display();
     }
 }
