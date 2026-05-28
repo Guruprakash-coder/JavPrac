@@ -46,9 +46,7 @@ public class AVLTree {
         return rotate(node);
     }
     private Node rotate(Node node){
-        if(balanced()){
-            return node;
-        }
+
         if(height(node.left)>height(node.right)){
             //left heavy
             if(height(node.left.left)-height(node.left.right)>0){
@@ -63,9 +61,24 @@ public class AVLTree {
         }
         if(height(node.right)>height(node.left)){
             //right heavy
+            if(height(node.right.right)-height(node.right.left)>0){
+                //right right
+                return leftrotate(node)
+            }
+            if(height(node.right.right)-height(node.right.left)<0){
+                //right left
+                node.right=rightrotate(node.right);
+                return leftrotate(node);
+            }
         }
 
         return node;
+
+    }
+    private Node rightrotate(Node node){
+
+    }
+    private Node leftrotate(Node node){
 
     }
     public void populate(int[] nums){
