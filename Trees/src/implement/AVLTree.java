@@ -1,6 +1,6 @@
 package implement;
 
-public class BST {
+public class AVLTree {
     public class Node{
         private int value;
         private int height;
@@ -16,7 +16,7 @@ public class BST {
     }
 
     private Node root;
-    public BST(){
+    public AVLTree(){
 
     }
     public int height(Node node){
@@ -37,7 +37,7 @@ public class BST {
             return node;
         }
         if(value<node.value){
-             node.left=insert(value,node.left);
+            node.left=insert(value,node.left);
         }
         if(value>node.value){
             node.right=insert(value, node.right);
@@ -67,10 +67,10 @@ public class BST {
         return balanced(root);
     }
     private boolean balanced(Node node){
-       if(node==null){
-           return true;
-       }
-       return Math.abs(height(node.left)-height(node.right))<=1 && balanced(node.left) && balanced(node.right);
+        if(node==null){
+            return true;
+        }
+        return Math.abs(height(node.left)-height(node.right))<=1 && balanced(node.left) && balanced(node.right);
     }
     public void preOrder(){
         preOrder(root);
