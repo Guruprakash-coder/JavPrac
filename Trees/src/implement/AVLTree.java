@@ -43,7 +43,30 @@ public class AVLTree {
             node.right=insert(value, node.right);
         }
         node.height=Math.max(height(node.left),height(node.right))+1;
+        return rotate(node);
+    }
+    private Node rotate(Node node){
+        if(balanced()){
+            return node;
+        }
+        if(height(node.left)>height(node.right)){
+            //left heavy
+            if(height(node.left.left)-height(node.left.right)>0){
+                //left left case
+                return rightrotate(node);
+            }
+            if(height(node.left.left)-height(node.left.right)<0){
+                //left right case
+                node.left=leftrotate(node.left);
+                return rightrotate(node);
+            }
+        }
+        if(height(node.right)>height(node.left)){
+            //right heavy
+        }
+
         return node;
+
     }
     public void populate(int[] nums){
         for(int i=0;i<nums.length;i++){
