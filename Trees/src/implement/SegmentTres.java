@@ -4,7 +4,8 @@ public class SegmentTres {
     public static void main(String[] args) {
         int[] arr={3,8,6,7,-2,-8,4,9};
         SegmentTres tree=new SegmentTres(arr);
-        tree.display();
+        //tree.display();//
+        System.out.println(tree.query(1,6));
 
     }
     private static class Node{
@@ -37,7 +38,7 @@ public class SegmentTres {
         node.left=constructTree(arr,s,mid);
         node.right=constructTree(arr,mid+1,e);
 
-        node.data=node.left.data+node.left.data;
+        node.data=node.left.data+node.right.data;
         return node;
     }
     public void display(){
@@ -51,7 +52,7 @@ public class SegmentTres {
             str=str+"No left child";
         }
 
-        str=str+"Interval=["+node.startinterval+"-"+node.endinterval+"] and data :"+node.data + "+->";
+        str=str+"Interval=["+node.startinterval+"-"+node.endinterval+"] and data :"+node.data + "=>";
         if(node.right!=null){
             str=str+"Interval=["+node.right.startinterval+"-"+node.right.endinterval+"] and data :"+node.right.data + "=>";
         }else{
