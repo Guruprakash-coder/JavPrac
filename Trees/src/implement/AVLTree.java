@@ -51,7 +51,7 @@ public class AVLTree {
         if(height(node.left)>height(node.right)){
             //left heavy
             if(height(node.left.left)-height(node.left.right)>0){
-                //left left case
+                //left-left case
                 return rightrotate(node);
             }
             if(height(node.left.left)-height(node.left.right)<0){
@@ -63,7 +63,7 @@ public class AVLTree {
         if(height(node.right)>height(node.left)){
             //right heavy
             if(height(node.right.right)-height(node.right.left)>0){
-                //right right
+                //right-right
                 return leftrotate(node);
             }
             if(height(node.right.right)-height(node.right.left)<0){
