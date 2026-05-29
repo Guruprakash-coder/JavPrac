@@ -80,14 +80,20 @@ public class SegmentTres {
         }
     }
     public void update(int index,int value){
-
+        this.root.data=update(this.root,index,value);
     }
-    private void update(Node node,int index,int value){
+    private int update(Node node,int index,int value){
         if(index>=node.startinterval && index<=node.endinterval){
             if(index== node.startinterval && index==node.endinterval){
                 node.data=value;
+            }else{
+                int leftans=update(node.left,index,value);
+                int rightans=update(node.right,index,value);
+                node.data=leftans+rightans;
+                return node.data;
             }
         }
+        return node.data;
     }
 
 
