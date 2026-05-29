@@ -67,5 +67,28 @@ public class SegmentTres {
         }
     }
 
+    public int query(int si,int ei){
+        return this.query(this.root,si,ei);
+    }
+    private int query(Node node ,int si ,int ei){
+        if(node.startinterval>=si && node.endinterval<=ei){
+            return node.data;
+        }else if(node.startinterval>ei || node.endinterval<si){
+            return 0;
+        }else{
+            return this.query(node.left,si,ei)+this.query(node.right,si,ei);
+        }
+    }
+    public void update(int index,int value){
+
+    }
+    private void update(Node node,int index,int value){
+        if(index>=node.startinterval && index<=node.endinterval){
+            if(index== node.startinterval && index==node.endinterval){
+                node.data=value;
+            }
+        }
+    }
+
 
 }
