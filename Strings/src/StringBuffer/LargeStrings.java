@@ -1,5 +1,7 @@
 package StringBuffer;
 
+import java.util.Random;
+
 public class LargeStrings {
     public static void main(String[] args) {
         StringBuffer buffer=new StringBuffer();
@@ -7,8 +9,10 @@ public class LargeStrings {
         String str= buffer.toString();
         buffer.append(4);
         buffer.insert(2,"rahul");
-        buffer.replace(0,buffer.length(),"hello");
+        System.out.println(buffer.capacity());
+        System.out.println(buffer.length());
         System.out.println(buffer);
-
+        Random r=new Random();
+        System.out.println((int)(r.nextFloat()*26));
     }
 }
