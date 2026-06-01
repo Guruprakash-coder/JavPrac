@@ -1,5 +1,6 @@
 package StringBuffer;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class RandomString {
@@ -11,5 +12,13 @@ public class RandomString {
             sb.append((char)randomchar);
         }
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        int n=20;
+        String nae=generate(n);
+        System.out.println(nae);
+        DecimalFormat df=new DecimalFormat("0000.0000");
+        System.out.println(df.format(32));
     }
 }
