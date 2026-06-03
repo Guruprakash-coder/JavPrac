@@ -11,7 +11,14 @@ public class factorial {
     }
 
     public static void main(String[] args) {
-        BigInteger s=fact(873);
+        BigInteger s=fact(100);
         System.out.println(s);
+        BD();
+    }
+    static void BD(){
+        double x=0.03;
+        double y=0.04;
+        double ans=y-x;
+        System.out.println(ans);
     }
 }
