@@ -1,4 +1,6 @@
+import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.text.Format;
 
 public class factorial {
     static BigInteger fact(int n){
@@ -16,9 +18,11 @@ public class factorial {
         BD();
     }
     static void BD(){
-        double x=0.03;
-        double y=0.04;
-        double ans=y-x;
+        BigDecimal x=new BigDecimal("0.03342543235425343543543");
+        BigDecimal y=new BigDecimal("0.049823489987432896749367");
+        BigDecimal ans=y.subtract(x);
+
         System.out.println(ans);
+        System.out.println(ans.pow(98890));
     }
 }
