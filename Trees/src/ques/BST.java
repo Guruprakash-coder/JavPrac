@@ -1,31 +1,31 @@
 package ques;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class TreeNode {
+public class BST {
     StringBuilder sb=new StringBuilder("123");
 
-    public TreeNode(){
+    public BST(){
 
     }
-    private static class Node{
+    private static class TreeNode {
         private int value;
-        Node left;
-        Node right;
-        public Node(int value){
+        TreeNode left;
+        TreeNode right;
+        public TreeNode(int value){
             this.value=value;
         }
     }
-    private Node root;
+    private TreeNode root;
 
     public void populate(Scanner scanner){
         System.out.println("Enter the root Node:");
         int value=scanner.nextInt();
-        root=new Node(value);
+        root=new TreeNode(value);
         populate(scanner,root);
     }
 
-    private void populate(Scanner scanner, Node node) {
+    private void populate(Scanner scanner, TreeNode node) {
         System.out.println("Do you want to enter left of"+node.value);
         boolean left=scanner.nextBoolean();
         if(left){
@@ -74,10 +74,36 @@ public class TreeNode {
         prettyDisplay(node.left,level+1);
 
     }
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result=new ArrayList<>();
+        if(root==null){
+            return result;
+        }
+        Queue<BST> q=new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+            int levelSize=q.size();
+            List<Integer> cl=new ArrayList<>();
+            for(int i=0;i<levelSize;i++){
+                TreeNode curr= q.poll();
+                cl.add(curr.value);
+                if(curr.left!=null){
+                    q.offer(left);
+                }
+                if(curr.right!=null){
+                    q.offer(right);
+                }
+            }
+            result.add(cl);
+
+        }
+        return result;
+
+    }
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        TreeNode tree=new TreeNode();
+        BST tree=new BST();
         tree.populate(sc);
         tree.prettyDisplay();
     }
