@@ -2,10 +2,10 @@ package ques;
 
 import java.util.Scanner;
 
-public class BinaryTree {
+public class TreeNode {
     StringBuilder sb=new StringBuilder("123");
 
-    public BinaryTree(){
+    public TreeNode(){
 
     }
     private static class Node{
@@ -77,7 +77,7 @@ public class BinaryTree {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        BinaryTree tree=new BinaryTree();
+        TreeNode tree=new TreeNode();
         tree.populate(sc);
         tree.prettyDisplay();
     }
