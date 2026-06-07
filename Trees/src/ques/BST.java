@@ -31,7 +31,7 @@ public class BST {
         if(left){
             System.out.println("Enter the value of the left of"+node.value);
             int value=scanner.nextInt();
-            node.left=new Node(value);
+            node.left=new TreeNode(value);
             populate(scanner,node.left);
         }
         System.out.println("Do you want to enter right of"+node.value);
@@ -39,14 +39,14 @@ public class BST {
         if(right){
             System.out.println("Enter the value of the right of"+node.value);
             int value=scanner.nextInt();
-            node.right=new Node(value);
+            node.right=new TreeNode(value);
             populate(scanner,node.right);
         }
     }
     public void display(){
         display(root,"");
     }
-    public void display(Node node,String indent){
+    public void display(TreeNode node,String indent){
         if(node==null){
             return;
         }
@@ -58,7 +58,7 @@ public class BST {
         prettyDisplay(root,0);
     }
 
-    private void prettyDisplay(Node node, int level) {
+    private void prettyDisplay(TreeNode node, int level) {
         if(node==null){
             return;
         }
@@ -79,7 +79,7 @@ public class BST {
         if(root==null){
             return result;
         }
-        Queue<BST> q=new LinkedList<>();
+        Queue<TreeNode> q=new LinkedList<>();
         q.offer(root);
         while(!q.isEmpty()){
             int levelSize=q.size();
@@ -88,10 +88,10 @@ public class BST {
                 TreeNode curr= q.poll();
                 cl.add(curr.value);
                 if(curr.left!=null){
-                    q.offer(left);
+                    q.offer(curr.left);
                 }
                 if(curr.right!=null){
-                    q.offer(right);
+                    q.offer(curr.right);
                 }
             }
             result.add(cl);
