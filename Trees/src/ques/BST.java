@@ -100,6 +100,57 @@ public class BST {
         return result;
 
     }
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> result=new ArrayList<>();
+        if(root==null){
+            return result;
+        }
+        Queue<TreeNode> q=new LinkedList<>();
+        boolean rev=false;
+        q.offer(root);
+        while(!q.isEmpty()){
+            int LevelSize=q.size();
+            LinkedList<Integer> cl=new LinkedList<>();
+            for(int i=0;i<LevelSize;i++){
+                TreeNode curr=q.poll();
+                if(curr.left!=null){
+                    q.offer(curr.left);
+                }
+                if(curr.right!=null){
+                    q.offer(curr.right);
+                }
+                if(rev){
+                    cl.add(0,curr.value);
+                }else{
+                    cl.add(curr.value);
+                }
+
+            }
+            result.add(cl);
+            rev=!rev;
+        }
+        return result;
+
+    }
+    /*
+    public Node connect(Node root) {
+        if(root==null){
+            return root;
+        }
+        Node leftMost=root;
+        while(leftMost.left!=null){
+            Node curr=leftMost;
+            while(curr!=null){
+                curr.left.next=curr.right;
+                if(curr.next!=null){
+                    curr.right.next=curr.next.left;
+                }
+                curr=curr.next;
+            }
+            leftMost=leftMost.left;
+        }
+        return root;
+    }*/
     public TreeNode findSuccessor(TreeNode root,int key){
         if(root==null){
             return root;
