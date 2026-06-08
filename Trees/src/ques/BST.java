@@ -46,7 +46,7 @@ public class BST {
     public void display(){
         display(root,"");
     }
-    public void display(TreeNode node,String indent){
+    private void display(TreeNode node,String indent){
         if(node==null){
             return;
         }
@@ -100,7 +100,27 @@ public class BST {
         return result;
 
     }
+    public TreeNode findSuccessor(TreeNode root,int key){
+        if(root==null){
+            return root;
+        }
+        Queue<TreeNode> q=new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+             TreeNode curr=q.poll();
+             if(curr.left!=null){
+                 q.offer(curr.left);
+             }
+             if(curr.right!=null){
+                 q.offer(curr.right);
+             }
+             if(curr.value==key){
+                 return q.peek();
+             }
 
+        }
+        return null;
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         BST tree=new BST();
