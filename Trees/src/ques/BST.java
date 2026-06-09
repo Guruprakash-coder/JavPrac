@@ -1,5 +1,7 @@
 package ques;
 
+import com.sun.source.tree.Tree;
+
 import java.util.*;
 
 public class BST {
@@ -171,6 +173,31 @@ public class BST {
 
         }
         return null;
+    }
+    public boolean isSymmetric(TreeNode root) {
+        Queue<TreeNode> q=new LinkedList<>();
+        q.add(root.left);
+        q.add(root.right);
+
+        while(!q.isEmpty()){
+            TreeNode left=q.poll();
+            TreeNode right=q.poll();
+
+            if(left==null && right==null){
+                continue;
+            }
+            if(left==null || right==null){
+                return false;
+            }
+            if(left.value != right.value){
+                return false;
+            }
+            q.add(left.left);
+            q.add(right.right);
+            q.add(left.right);
+            q.add(right.left);
+        }
+        return true;
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
