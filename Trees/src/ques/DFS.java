@@ -38,6 +38,31 @@ public class DFS {
           diameter=Math.max(dia,diameter);
           return Math.max(lefth,righth)+1;
       }
+//    public void flatten(TreeNode root) {
+//        if(root==null){
+//            return;
+//        }
+//        Queue<TreeNode> q=new LinkedList<>();
+//        getQueue(root,q);
+//        TreeNode prev=q.poll();
+//        while(!q.isEmpty()){
+//            TreeNode curr=q.poll();
+//            prev.left=null;
+//            curr.left=null;
+//            prev.right=curr;
+//            prev=curr;
+//        }
+//
+//    }
+//    private void getQueue(TreeNode node,Queue<TreeNode > q){{
+//        if(node==null) return;
+//
+//        q.offer(node);
+//        getQueue(node.left,q);
+//        getQueue(node.right,q);
+//    }
+//
+//    }
     public TreeNode invertTree(TreeNode root) {
         if(root==null){
             return null;
