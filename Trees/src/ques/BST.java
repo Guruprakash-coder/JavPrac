@@ -153,7 +153,7 @@ public class BST {
         }
         return root;
     }*/
-    public TreeNode findSuccessor(TreeNode root,int key){
+    private TreeNode findSuccessor(TreeNode root,int key){
         if(root==null){
             return root;
         }
