@@ -89,5 +89,29 @@ public class DFS {
         }
         return left==null?right:left;
     }
+    int count=0;
+    public int kthSmallest(TreeNode root, int k) {
+        TreeNode node=helper(root,k);
+        return node.val;
 
+    }
+    private TreeNode helper(TreeNode node,int k){
+        if(node==null){
+            return null;
+        }
+        TreeNode left=helper(node.left,k);
+        if(left!=null){
+            return left;
+        }
+        count++;
+        if(count == k){
+            return node;
+        }
+
+        return helper(node.right,k);
+    }
+    //very very important int question
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+
+    }
 }
