@@ -22,5 +22,11 @@ public class pathSum {
         return hasPathSum(root.left,targetSum-root.val) || hasPathSum(root.right,targetSum- root.val);
 
     }
+    boolean findPath(TreeNode node,int[] arr){
+        if(root==null){
+            return arr.length==0;
+        }
+
+    }
 
 }
