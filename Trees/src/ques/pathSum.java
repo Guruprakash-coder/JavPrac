@@ -26,7 +26,21 @@ public class pathSum {
         if(root==null){
             return arr.length==0;
         }
+        return findPath(node, arr,0);
+    }
+    private boolean findPath(TreeNode node,int[] arr,int i){
+        if(node==null){
+            return false;
+        }
 
+        if(i>=arr.length || node.val!=arr[i]){
+            return false;
+        }
+        if(node.left==null && node.right==null && i==arr.length-1){
+            return true;
+        }
+
+        return findPath(node.left,arr,i+1) || findPath(node.left,arr,i+1);
     }
 
 }
