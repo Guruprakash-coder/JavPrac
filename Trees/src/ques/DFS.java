@@ -15,8 +15,14 @@ public class DFS {
             while(!s.isEmpty()){
                 TreeNode curr=s.pop();
                 System.out.println(curr.val);
-                s.push(curr.right);
-                s.push(curr.left);
+                if(curr.right!=null){
+                    s.push(curr.right);
+                }
+                if(curr.left!=null){
+                    s.push(curr.left);
+
+                }
+
             }
 
         }
