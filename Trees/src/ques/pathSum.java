@@ -1,5 +1,9 @@
 package ques;
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+
 public class pathSum {
     private static class TreeNode {
         private int val;
@@ -41,6 +45,29 @@ public class pathSum {
         }
 
         return findPath(node.left,arr,i+1) || findPath(node.left,arr,i+1);
+    }
+    int countPaths(TreeNode node ,int sum){
+        List<Integer> path=new LinkedList<>();
+        return countPaths(node,sum,path);
+    }
+    int countpaths(TreeNode node,int sum,List<Integer> path){
+        if(node ==null){
+            return 0;
+        }
+        path.add(node.val);
+        int count=0;
+        int s=0;
+        ListIterator<Integer> itr=path.listIterator(path.size());
+        while(itr.hasPrevious()){
+            s+=itr.previous();
+            if(s==sum){
+                count++;
+            }
+        }
+
+        count+=countpaths(node.left,sum,path)+countpaths(node.right,sum,path);
+        path.remove(path.size()-1);
+        return count;
     }
 
 }
