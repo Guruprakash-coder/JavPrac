@@ -69,5 +69,28 @@ public class pathSum {
         path.remove(path.size()-1);
         return count;
     }
+    int findpaths(TreeNode node ,int sum){
+        List<List<Integer>> paths=new LinkedList<>();
+        return findpaths(node,sum,paths);
+    }
+    int findpaths(TreeNode node,int sum,List<List<Integer>> path){
+        if(node ==null){
+            return 0;
+        }
+        path.add(node.val);
+        int count=0;
+        int s=0;
+        ListIterator<Integer> itr=path.listIterator(path.size());
+        while(itr.hasPrevious()){
+            s+=itr.previous();
+            if(s==sum){
+                count++;
+            }
+        }
+
+        count+=countpaths(node.left,sum,path)+countpaths(node.right,sum,path);
+        path.remove(path.size()-1);
+        return count;
+    }
 
 }
