@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class DFS {
+
         void dfsStack(TreeNode node){
             if(node==null){
                 return ;
