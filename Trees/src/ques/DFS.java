@@ -3,9 +3,23 @@ package ques;
 import implement.BST;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class DFS {
+        void dfsStack(TreeNode node){
+            if(node==null){
+                return ;
+            }
+            Stack<TreeNode> s=new Stack<>();
+            s.push(node);
+            while(!s.isEmpty()){
+                TreeNode curr=s.pop();
+                System.out.println(curr.val);
+                s.push(curr.right);
+                s.push(curr.left);
+            }
 
+        }
 
       public class TreeNode {
           int val;
