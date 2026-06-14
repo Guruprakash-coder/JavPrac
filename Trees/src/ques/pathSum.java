@@ -1,5 +1,6 @@
 package ques;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
@@ -69,28 +70,27 @@ public class pathSum {
         path.remove(path.size()-1);
         return count;
     }
-    int findpaths(TreeNode node ,int sum){
-        List<List<Integer>> paths=new LinkedList<>();
-        return findpaths(node,sum,paths);
+    List<List<Integer>> findpaths(TreeNode node ,int sum){
+        List<List<Integer>> paths=new ArrayList<>();
+        List<Integer> path=new ArrayList<>();
+        findpaths(node,sum,path,paths);
+        return paths;
     }
-    int findpaths(TreeNode node,int sum,List<List<Integer>> path){
+    void findpaths(TreeNode node,int sum,List<Integer>path,List<List<Integer>> paths){
         if(node ==null){
-            return 0;
+            return ;
         }
         path.add(node.val);
-        int count=0;
-        int s=0;
-        ListIterator<Integer> itr=path.listIterator(path.size());
-        while(itr.hasPrevious()){
-            s+=itr.previous();
-            if(s==sum){
-                count++;
-            }
+        if(node.val==sum && node.left==null & node.right==null){
+            paths.add(new ArrayList<>(path));
+        }else{
+            findpaths(node.left,sum-node.val,path,paths);
+            findpaths(node.right,sum-node.val,path,paths)
         }
 
-        count+=countpaths(node.left,sum,path)+countpaths(node.right,sum,path);
+
         path.remove(path.size()-1);
-        return count;
+
     }
 
 }
