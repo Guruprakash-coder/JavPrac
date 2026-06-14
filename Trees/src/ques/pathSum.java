@@ -46,9 +46,9 @@ public class pathSum {
 
         return findPath(node.left,arr,i+1) || findPath(node.left,arr,i+1);
     }
-    int countPaths(TreeNode node ,int sum){
+    int countpaths(TreeNode node ,int sum){
         List<Integer> path=new LinkedList<>();
-        return countPaths(node,sum,path);
+        return countpaths(node,sum,path);
     }
     int countpaths(TreeNode node,int sum,List<Integer> path){
         if(node ==null){
