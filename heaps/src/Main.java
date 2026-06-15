@@ -12,6 +12,9 @@ public class Main {
         System.out.println(map.get("gp"));
         System.out.println(map.keySet());
         Collection<Integer> h=new LinkedList<>();
+        StringBuilder sb=new StringBuilder();
+        String s=new String();
+
 
 
     }
