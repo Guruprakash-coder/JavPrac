@@ -1,3 +1,4 @@
+import javax.swing.text.html.parser.Entity;
 import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -9,5 +10,10 @@ public class Main {
         map.put("ehdvjwb",832);
         map.put("gjwfbedp",8420);
         System.out.println(map.get("gp"));
+        System.out.println(map.keySet());
+        Collection<Integer> h=new LinkedList<>();
+
+
     }
+
 }
