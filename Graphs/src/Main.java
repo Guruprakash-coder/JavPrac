@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -36,6 +33,7 @@ public class Main {
     private static void dfs(int node,boolean[] vis,ArrayList<ArrayList<Integer>> adj,ArrayList<Integer> ls){
         vis[node]=true;
         ls.add(node);
+        
         for(int i=0;i<adj.get(node).size();i++){
             int neigh=adj.get(node).get(i);
             if(!vis[neigh]){
