@@ -3,6 +3,15 @@ import java.util.*;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    static class Pair {
+        int first;
+        int second;
+
+        Pair(int first, int second) {
+            this.first = first;
+            this.second = second;
+        }
+    }
     List<Integer> bfsOfGraph(int v,ArrayList<ArrayList<Integer>> adj){
         boolean[] vis=new boolean[v];
         List<Integer> bfs=new ArrayList<>();
@@ -33,7 +42,8 @@ public class Main {
     private static void dfs(int node,boolean[] vis,ArrayList<ArrayList<Integer>> adj,ArrayList<Integer> ls){
         vis[node]=true;
         ls.add(node);
-        
+
+
         for(int i=0;i<adj.get(node).size();i++){
             int neigh=adj.get(node).get(i);
             if(!vis[neigh]){
@@ -41,6 +51,35 @@ public class Main {
             }
 
         }
+    }
+    public boolean hasCyclebfs(int v,ArrayList<ArrayList<Integer>> adj){
+        boolean[] vis=new boolean[adj.size()];
+        for(int i=0;i<adj.size();i++){
+            if(!vis[i]){
+                if(checkcyclebfs(i,adj,vis)) return true;
+            }
+        }
+        return false;
+    }
+    private boolean checkcyclebfs(int src,ArrayList<ArrayList<Integer>> adj,boolean[] vis){
+        vis[src]=true;
+        Queue<Pair> q=new LinkedList<>();
+        q.add(new Pair(src,-1));
+        while(!q.isEmpty()){
+            int node=q.peek().first;
+            int parent=q.peek().second;
+            q.poll();
+            for(int adnode: adj.get(node)){
+                if(!vis[adnode]){
+                    vis[adnode]=true;
+                    q.add(new Pair(adnode,node));
+                }else if(parent!=adnode){
+                    return true;
+                }
+            }
+
+        }
+        return false;
     }
 
 }
