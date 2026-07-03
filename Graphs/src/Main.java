@@ -42,7 +42,8 @@ public class Main {
     private static void dfs(int node,boolean[] vis,ArrayList<ArrayList<Integer>> adj,ArrayList<Integer> ls){
         vis[node]=true;
         ls.add(node);
-
+        PriorityQueue<Integer> pq=new PriorityQueue<>();
+        
 
         for(int i=0;i<adj.get(node).size();i++){
             int neigh=adj.get(node).get(i);
