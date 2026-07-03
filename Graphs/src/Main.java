@@ -43,7 +43,7 @@ public class Main {
         vis[node]=true;
         ls.add(node);
         PriorityQueue<Integer> pq=new PriorityQueue<>();
-        
+
 
         for(int i=0;i<adj.get(node).size();i++){
             int neigh=adj.get(node).get(i);
@@ -82,5 +82,25 @@ public class Main {
         }
         return false;
     }
+    public boolean hasCycledfs(int v,ArrayList<ArrayList<Integer>> adj){
+        boolean[] vis=new boolean[adj.size()];
+        for(int i=0;i<adj.size();i++){
+            if(!vis[i]){
+                if(checkcycledfs(i,-1,adj,vis)) return true;
+            }
+        }
+        return false;
+    }
+    private boolean checkcycledfs(int src,int parent,ArrayList<ArrayList<Integer>> adj,boolean[] vis){
+        if(vis[src]){
+            if(src!=parent) return false;
+        }
+        vis[src]=true;
+        for(int neigh:adj.get(src)){
+            checkcycledfs(neigh,src,adj,vis);
+        }
+        return false;
+    }
+
 
 }
