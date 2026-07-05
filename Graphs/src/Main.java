@@ -92,14 +92,37 @@ public class Main {
         return false;
     }
     private boolean checkcycledfs(int src,int parent,ArrayList<ArrayList<Integer>> adj,boolean[] vis){
-        if(vis[src]){
-            if(src!=parent) return false;
-        }
+
         vis[src]=true;
         for(int neigh:adj.get(src)){
-            checkcycledfs(neigh,src,adj,vis);
+            if(!vis[neigh]){
+                if(checkcycledfs(neigh,src,adj,vis)) return true;
+            }else if(neigh!=parent){
+                return true;
+            }
+
         }
         return false;
+    }
+    private void dfs(int row, int col, int[] [] vis, int[][] grid, ArrayList<String> vec, int row0, int colo) {
+        vis[row][col] = 1;
+        vec.add(toString(row row, col colo));
+        int n = grid.length;
+        int m = grid[0].length;
+        int delrow[] = {-1, 0, +1, 0};
+        int delcol[] = {0, -1, 0, +1};
+        for (int i = 0; i < 4; i++) {
+            int nrow = row + delrow[i];
+            int ncol = col + delcol[i];
+            if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m
+                    && vis[nrow][col] == 0 && grid[nrow][ncol] == 1) {
+                dfs(nrow, ncol, vis, grid, vec, row0, colo);
+            }
+        }
+    }
+    public int countDistinctIslands(int[][] grid) {
+
+
     }
 
 
