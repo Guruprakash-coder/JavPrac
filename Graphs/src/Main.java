@@ -104,9 +104,9 @@ public class Main {
         }
         return false;
     }
-    private void dfs(int row, int col, int[] [] vis, int[][] grid, ArrayList<String> vec, int row0, int colo) {
-        vis[row][col] = 1;
-        vec.add(toString(row row, col colo));
+    private void dfs(int row, int col, boolean[][] vis, int[][] grid, ArrayList<String> vec, int row0, int col0) {
+        vis[row][col] = true;
+        vec.add(toString(row-row0, col-col0));
         int n = grid.length;
         int m = grid[0].length;
         int delrow[] = {-1, 0, +1, 0};
@@ -115,13 +115,29 @@ public class Main {
             int nrow = row + delrow[i];
             int ncol = col + delcol[i];
             if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m
-                    && vis[nrow][col] == 0 && grid[nrow][ncol] == 1) {
-                dfs(nrow, ncol, vis, grid, vec, row0, colo);
+                    && !vis[nrow][col]  && grid[nrow][ncol] == 1) {
+                dfs(nrow, ncol, vis, grid, vec, row0, col0);
             }
         }
     }
+    private String toString(int r,int c){
+        return Integer.toString(r)+" "+Integer.toString(c);
+    }
     public int countDistinctIslands(int[][] grid) {
-
+        int n= grid.length;
+        int m= grid[0].length;
+        boolean[][] vis=new boolean[n][m];
+        HashSet<ArrayList<String>> st=new HashSet<>();
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(!vis[i][j] && grid[i][j]==1){
+                    ArrayList<String> isl=new ArrayList<>();
+                    dfs(i,j,vis,grid,isl,i,j);
+                    st.add(isl);
+                }
+            }
+        }
+        return st.size();
 
     }
 
