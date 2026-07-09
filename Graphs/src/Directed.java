@@ -15,10 +15,10 @@ public class Directed {
     private boolean dfsCheck(int i, ArrayList<ArrayList<Integer>> adj, int[] vis, int[] pathVis) {
         vis[i]=1;
         pathVis[i]=1;
-        for(int neigh:ArrayList.get(i)){
+        for(int neigh:adj.get(i)){
             if(vis[neigh]==0){
                 if(dfsCheck(neigh,adj,vis,pathVis)) return true;
-            }else if(pathVis[i]==1){
+            }else if(pathVis[neigh]==1){
                 return true;
             }
         }
