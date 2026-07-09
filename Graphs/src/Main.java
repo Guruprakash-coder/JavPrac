@@ -43,6 +43,7 @@ public class Main {
         vis[node]=true;
         ls.add(node);
         PriorityQueue<Integer> pq=new PriorityQueue<>();
+        HashSet<Integer> s=new HashSet<>();
 
 
         for(int i=0;i<adj.get(node).size();i++){
@@ -115,11 +116,12 @@ public class Main {
             int nrow = row + delrow[i];
             int ncol = col + delcol[i];
             if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m
-                    && !vis[nrow][col]  && grid[nrow][ncol] == 1) {
+                    && !vis[nrow][ncol]  && grid[nrow][ncol] == 1) {
                 dfs(nrow, ncol, vis, grid, vec, row0, col0);
             }
         }
     }
+
     private String toString(int r,int c){
         return Integer.toString(r)+" "+Integer.toString(c);
     }
