@@ -143,34 +143,7 @@ public class Main {
 
     }
 
-    static int[] topoSort(int V,List<List<Integer>> adj){
-        boolean vis[] =new boolean[V];
-        Stack<Integer> s=new Stack<>();
-        for(int i=0;i<V;i++){
-            if(!vis[i]){
-                topdfs(adj,s,vis,i);
-            }
-        }
-        int ans[]=new int[V];
-        int i=0;
-        while(!s.isEmpty()){
-            ans[i]=s.pop();
-            i++;
-        }
-        return ans;
 
-    }
-    private static void topdfs(List<List<Integer>> adj,Stack<Integer> s,boolean[] vis,int i){
-        vis[i]=true;
-        for(int neigh:adj.get(i)){
-            if(!vis[neigh]){
-                topdfs(adj, s, vis, neigh);
-            }
-
-        }
-        s.push(i);
-
-    }
 
 
 }
