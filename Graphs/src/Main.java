@@ -143,5 +143,19 @@ public class Main {
 
     }
 
+    static int[] topoSort(int V,ArrayList<ArrayList<Integer>> adj){
+        boolean vis[] =new boolean[V];
+        Stack<Integer> s=new Stack<>();
+        for(int i=0;i<V;i++){
+            if(!vis[i]){
+                topdfs(adj,s,vis,i);
+            }
+        }
+
+    }
+    private static void topdfs(){
+
+    }
+
 
 }
