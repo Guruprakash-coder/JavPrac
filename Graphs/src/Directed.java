@@ -43,7 +43,7 @@ public class Directed {
             i++;
         }
         return ans;
-
+f
     }
     private static void topdfs(List<List<Integer>> adj,Stack<Integer> s,boolean[] vis,int i){
         vis[i]=true;
