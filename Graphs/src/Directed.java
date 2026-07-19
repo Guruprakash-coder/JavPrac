@@ -73,8 +73,14 @@ public class Directed {
         while(!q.isEmpty()){
             int node=q.poll();
             topo[ind++]=node;
-
+            for(int it:adj.get(node)){
+                InDegree[it]--;
+                if(InDegree[it]==0){
+                    q.offer(it);
+                }
+            }
         }
+        return topo;
 
     }
 }
