@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Directed {
 
@@ -43,7 +41,7 @@ public class Directed {
             i++;
         }
         return ans;
-f
+
     }
     private static void topdfs(List<List<Integer>> adj,Stack<Integer> s,boolean[] vis,int i){
         vis[i]=true;
@@ -54,6 +52,29 @@ f
 
         }
         s.push(i);
+
+    }
+    public int[] kahn(List<List<Integer>> adj){
+        List<Integer> ans=new ArrayList<>();
+        int[] InDegree=new int[adj.size()];
+        for(List<Integer> l :adj){
+            for(int it:l){
+                InDegree[it]++;
+            }
+        }
+        Queue<Integer> q=new LinkedList<>();
+        for(int i=0;i<InDegree.length;i++){
+            if(InDegree[i]==0){
+                q.offer(i);
+            }
+        }
+        int[] topo=new int[adj.size()];
+        int ind=0;
+        while(!q.isEmpty()){
+            int node=q.poll();
+            topo[ind++]=node;
+
+        }
 
     }
 }
