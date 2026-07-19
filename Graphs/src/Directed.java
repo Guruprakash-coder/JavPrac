@@ -55,7 +55,6 @@ public class Directed {
 
     }
     public int[] kahn(List<List<Integer>> adj){
-        List<Integer> ans=new ArrayList<>();
         int[] InDegree=new int[adj.size()];
         for(List<Integer> l :adj){
             for(int it:l){
