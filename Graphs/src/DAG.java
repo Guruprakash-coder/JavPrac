@@ -37,11 +37,13 @@ public class DAG {
         dist[0]=0;
         while(!s.isEmpty()){
             int no=s.pop();
-            for(Pair p:adj.get(no)){
-                int v=p.node;
-                int w=p.weight;
-                if (dist[no] != Integer.MAX_VALUE) {
+            if (dist[no] != Integer.MAX_VALUE) {
+                for (Pair p : adj.get(no)) {
+                    int v = p.node;
+                    int w = p.weight;
+
                     dist[v] = Math.min(dist[v], dist[no] + w);
+
                 }
             }
         }
