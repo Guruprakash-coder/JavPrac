@@ -50,7 +50,7 @@ public class alienDictionary {
         List<Integer> topo=toposort(k,adj);
         StringBuilder ans=new StringBuilder();
         for(int i:topo){
-            ans.append(i+'a');
+            ans.append((char)(i+'a'));
         }
         return ans.toString();
     }
