@@ -13,6 +13,12 @@ public class unDirected {
         int dist[]=new int[n];
         Arrays.fill(dist,10_000);
         Queue<Integer> q=new LinkedList<>();
+        dist[src]=0;
+        q.offer(src);
+        while(!q.isEmpty()){
+            int node=q.poll();
+            for(int it:)
+        }
 
     }
 
