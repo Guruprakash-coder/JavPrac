@@ -17,8 +17,15 @@ public class unDirected {
         q.offer(src);
         while(!q.isEmpty()){
             int node=q.poll();
-            for(int it:)
+            for(int it:adj.get(node)){
+                if(dist[it]==10_000) q.add(it);
+                dist[it]=Math.min(dist[node]+1,dist[it]);
+            }
         }
+        for(int i=0;i<n;i++){
+            if(dist[i]==10_000) dist[i]=-1;
+        }
+        return dist;
 
     }
 
