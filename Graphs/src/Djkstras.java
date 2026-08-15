@@ -24,9 +24,19 @@ public class Djkstras {
             int distance=node.dist;
             int nodeno=node.node;
             for(int i=0;i<adj.get(nodeno).size();i++){
+                int edgeweight=adj.get(i).get(1);
+                int adjNode=adj.get(i).get(0);
 
+                if(dists[adjNode]==Integer.MAX_VALUE){
+                    dists[adjNode]=edgeweight+distance;
+                    pq.offer(new Pair(dists[adjNode],adjNode));
+                }else if(dists[adjNode]>edgeweight+distance){
+                    dists[adjNode]=edgeweight+distance;
+                    pq.offer(new Pair(dists[adjNode],adjNode));
+                }
             }
         }
+        return dists;
     }
 
 }
