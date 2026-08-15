@@ -11,7 +11,7 @@ public class Djkstras {
             this.node=node;
         }
     }
-    public int[] djkstras(int V, ArrayList<ArrayList<Integer>> adj,int s){
+    public int[] djkstras(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj,int s){
         PriorityQueue<Pair> pq=new PriorityQueue<>(
                 (x,y)->Integer.compare(x.dist,y.dist)
         );
@@ -24,8 +24,8 @@ public class Djkstras {
             int distance=node.dist;
             int nodeno=node.node;
             for(int i=0;i<adj.get(nodeno).size();i++){
-                int edgeweight=adj.get(i).get(1);
-                int adjNode=adj.get(i).get(0);
+                int edgeweight=adj.get(nodeno).get(i).get(1);
+                int adjNode=adj.get(nodeno).get(i).get(0);
 
                 if(dists[adjNode]==Integer.MAX_VALUE){
                     dists[adjNode]=edgeweight+distance;
