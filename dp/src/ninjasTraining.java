@@ -2,8 +2,10 @@ import java.util.Arrays;
 
 public class ninjasTraining {
     int ninjaTraining(int n,int[][] points){
-        int dp[][]=new int[n][3];
-        Arrays.fill(dp,-1);
+        int dp[][]=new int[n][4];
+        for (int[] row : dp) {
+            Arrays.fill(row, -1);
+        }
         return f(n-1,3,points,dp);
     }
     int f(int day,int last,int[][] points,int[][] dp){
@@ -25,6 +27,6 @@ public class ninjasTraining {
         }
 
 
-        return dp[day][last];
+        return dp[day][last]=maxi;
     }
 }
