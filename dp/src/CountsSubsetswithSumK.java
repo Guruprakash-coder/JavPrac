@@ -15,7 +15,7 @@ public class CountsSubsetswithSumK {
         for(int i=0;i<arr.length;i++){
             dp[i][0]=1;
         }
-        dp[0][arr[0]]=1;
+        dp[0][arr[0]]+=1;
         for(int i=1;i<arr.length;i++){
             for(int sum=0;sum<=k;sum++){
                 int notake=dp[i-1][sum];
