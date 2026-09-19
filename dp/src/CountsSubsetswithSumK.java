@@ -18,7 +18,7 @@ public class CountsSubsetswithSumK {
         if(dp[ind][sum]!=-1) return dp[ind][sum];
         int notake=f(arr,ind-1,sum,dp);
         int take=0;
-        if(sum>=arr[ind-1]) take=f(arr,ind-1,sum-arr[ind-1],dp);
+        if(sum>=arr[ind]) take=f(arr,ind-1,sum-arr[ind],dp);
         return dp[ind][sum]=notake+take;
     }
 }
